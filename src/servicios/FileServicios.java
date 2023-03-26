@@ -20,6 +20,12 @@ public class FileServicios {
     public FileServicios() {
     }
 
+    public FileServicios(String pathPartidos, String pathPronositco) {
+        this.archivoPartidos = Paths.get(pathPartidos).toAbsolutePath();
+        this.archivoPronosticos = Paths.get(pathPronositco).toAbsolutePath();
+
+    }
+
     public Pronostico[] leePronosticos(Partido[] arrayPartidos) {
         String[] pronostico;
         Pronostico[] listaPronostico;
