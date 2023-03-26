@@ -2,6 +2,7 @@
 import entidad.Partido;
 import entidad.Pronostico;
 import entidad.ResultadoEnum;
+import entidad.Ronda;
 import servicios.FileServicios;
 
 public class Main {
@@ -24,9 +25,8 @@ public class Main {
         if (ejecutar) {
             Partido[] partidos = fileServicios.leePartidos();
             Pronostico[] pronosticos = fileServicios.leePronosticos(partidos);
-            int puntaje = puntos(partidos, pronosticos);
-
-
+            Ronda ronda = new Ronda("1",partidos);
+            int puntaje = ronda.puntos(pronosticos);
             System.out.println("Puntaje obtenido: " + puntaje);
         }
     }
