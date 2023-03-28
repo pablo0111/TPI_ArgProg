@@ -5,8 +5,8 @@ public class Pronostico {
     private ResultadoEnum resultado;
 
 
-    public Pronostico(Partido partdo, ResultadoEnum resultado) {
-        this.partdo = partdo;
+    public Pronostico(Partido partido, ResultadoEnum resultado) {
+        this.partdo = partido;
         this.resultado = resultado;
     }
 
@@ -14,8 +14,8 @@ public class Pronostico {
         return partdo;
     }
 
-    public void setPartdo(Partido partdo) {
-        this.partdo = partdo;
+    public void setPartdo(Partido partido) {
+        this.partdo = partido;
     }
 
     public ResultadoEnum getResultado() {
